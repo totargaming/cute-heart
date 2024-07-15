@@ -4,39 +4,39 @@ let totalMovement = 0;
 const baseSize = 20;
 const growthFactor = 0.0001;
 
-function createHeart(e) {
-  const currentTime = Date.now();
-  if (currentTime - lastExecutionTime < throttleTime) return;
-  lastExecutionTime = currentTime;
+// function createHeart(e) {
+//   const currentTime = Date.now();
+//   if (currentTime - lastExecutionTime < throttleTime) return;
+//   lastExecutionTime = currentTime;
 
-  let container = document.getElementById('container');
-  let heart = document.createElement('span');
-  let x, y;
+//   let container = document.getElementById('container');
+//   let heart = document.createElement('span');
+//   let x, y;
 
-  if (e.touches) {
-    x = e.touches[0].clientX;
-    y = e.touches[0].clientY;
-  } else {
-    x = e.clientX;
-    y = e.clientY;
-  }
+//   if (e.touches) {
+//     x = e.touches[0].clientX;
+//     y = e.touches[0].clientY;
+//   } else {
+//     x = e.clientX;
+//     y = e.clientY;
+//   }
 
-  heart.style.left = x + 'px';
-  heart.style.top = y + 'px';
+//   heart.style.left = x + 'px';
+//   heart.style.top = y + 'px';
 
-  let size = Math.random() * 80;
-  heart.style.width = 20 + size + 'px';
-  heart.style.height = 20 + size + 'px';
+//   let size = Math.random() * 80;
+//   heart.style.width = 20 + size + 'px';
+//   heart.style.height = 20 + size + 'px';
 
-  let transformValue = Math.random() * 360;
-  heart.style.transform = 'rotate(' + transformValue + 'deg)';
+//   let transformValue = Math.random() * 360;
+//   heart.style.transform = 'rotate(' + transformValue + 'deg)';
 
-  container.appendChild(heart);
+//   container.appendChild(heart);
 
-  setTimeout(function() {
-    heart.remove();
-  }, 1000);
-}
+//   setTimeout(function() {
+//     heart.remove();
+//   }, 1000);
+// }
 
 let currentSize = 100;
 const maxSize = 400;
@@ -92,5 +92,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('mousemove', createHeart);
-document.addEventListener('touchmove', createHeart);
+// document.addEventListener('mousemove', createHeart);
+// document.addEventListener('touchmove', createHeart);
